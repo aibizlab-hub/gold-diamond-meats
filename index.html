@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOLD DIAMOND MEATS · 金鑚肉食 — Finest Cuts Since 1962</title>
 <meta name="description" content="香港老字號肉類分銷 — 1962年起。B2B批發 · HACCP · Halal認證 · 24小時凍鏈直送。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0e0e0e;
@@ -18,8 +15,8 @@
     --muted:#8a857d;
     --gold:#c8954a;
     --gold-2:#e0b673;
-    --serif:'Fraunces', 'Cormorant Garamond', 'Times New Roman', serif;
-    --sans:'Manrope', system-ui, sans-serif;
+    --serif:'Cormorant Garamond','Times New Roman',serif;
+    --sans:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     --shadow-lg: 0 30px 60px -20px rgba(0,0,0,.6), 0 18px 36px -18px rgba(0,0,0,.5);
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -76,7 +73,7 @@
 
   /* ===== HERO ===== */
   .hero{position:relative;height:88vh;min-height:620px;display:flex;align-items:center;overflow:hidden}
-  .hero-img{position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=2400&q=85");background-size:cover;background-position:center;transform:scale(1.08);animation:slowZoom 18s ease-out forwards}
+  .hero-img{position:absolute;inset:0;background-image:url("assets/hero.png");background-size:cover;background-position:center;transform:scale(1.08);animation:slowZoom 18s ease-out forwards}
   @keyframes slowZoom{to{transform:scale(1)}}
   .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,14,.55) 0%,rgba(14,14,14,.35) 40%,rgba(14,14,14,.92) 100%);z-index:1}
   .hero-inner{position:relative;z-index:2;width:100%}
@@ -124,6 +121,7 @@
   .cut .img img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
   .cut:hover .img img{transform:scale(1.08)}
   .cut .tag{position:absolute;top:14px;left:14px;background:rgba(14,14,14,.85);backdrop-filter:blur(6px);color:var(--gold);font-size:10px;letter-spacing:.26em;text-transform:uppercase;padding:6px 12px;border-radius:2px}
+  .cut .tag.heat{background:rgba(200,149,74,.85);color:#0e0e0e}
   .cut .body{padding:24px 22px 26px}
   .cut .sku{font-size:10.5px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
   .cut h3{font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.2;margin-bottom:6px}
@@ -148,8 +146,7 @@
   .why-item p{color:var(--muted);font-size:14.5px;line-height:1.7}
 
   /* ===== wholesale CTA ===== */
-  .wholesale{position:relative;overflow:hidden}
-  .wholesale::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=2400&q=80") center/cover;opacity:.18}
+  .wholesale{position:relative;overflow:hidden;background:var(--bg)}
   .wholesale::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--bg) 0%,rgba(14,14,14,.9) 100%)}
   .wholesale .container{position:relative;z-index:2}
   .wholesale-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
@@ -187,8 +184,6 @@
   .foot-bottom{border-top:1px solid var(--line);padding-top:28px;display:flex;justify-content:space-between;color:var(--muted);font-size:12px;letter-spacing:.06em;flex-wrap:wrap;gap:14px}
 
   /* ===== reveal anim — progressive enhancement ===== */
-  /* Default: visible (no-JS / screenshot / SEO safe).
-     JS adds .reveal-ready to hide them, then .in to show. */
   .reveal{transition:opacity .9s ease, transform .9s ease}
   .reveal-ready{opacity:0;transform:translateY(36px)}
   .reveal.in{opacity:1;transform:none}
@@ -262,7 +257,7 @@
       <div class="eyebrow">Since 1962 · Hong Kong</div>
       <h1>The Finest Cuts,<br><em>Hand-selected</em> Daily.</h1>
       <div class="zh">自一九六二年 · 優 質 肉 食 批 發</div>
-      <p class="lead">三代家族經營。六十年冷凍鏈專業。B2B 批發、餐飲供應、零售精品 —— 為香港最具眼光的廚師與食肆，提供最高品質的肉類。</p>
+      <p class="lead">三代家族經營。六十年冷凍鏈專業。B2B 批發、餐飲供應、零售精品 —— 為香港最具眼光的廚師與食肆，提供最高品質的肉類與海鮮。</p>
       <div class="hero-ctas">
         <a href="#cuts" class="btn-primary">Browse Our Cuts</a>
         <a href="#wholesale" class="btn-ghost">Wholesale Account →</a>
@@ -289,24 +284,25 @@
   <div class="container">
     <div class="sec-head reveal">
       <div class="eyebrow">Featured Cuts · 本週精選</div>
-      <h2>Chosen by hand.<br><em>Cut</em> by master.</h2>
+      <h2>Real cuts.<br><em>Real prices.</em></h2>
       <div class="zh">本 週 精 選 肉 切</div>
-      <p class="lead">由三代肉類師傅親自挑選、修切、真空包裝。每件產品附 SKU、產地、HACCP 認證及 Halal 標籤。</p>
+      <p class="lead">由貨單直接上架。每件產品附 SKU、產地、規格及定位標籤；滿 HK$500 即享免運。</p>
     </div>
 
     <div class="cuts-grid">
+
       <div class="cut reveal">
         <div class="img">
-          <img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=900&q=85" alt="Wagyu Ribeye" loading="lazy">
-          <div class="tag">Halal · Frozen</div>
+          <img src="assets/p01-nz-beef.png" alt="New Zealand Beef Ribeye" loading="lazy">
+          <div class="tag">高級食材</div>
         </div>
         <div class="body">
-          <div class="sku">SKU · WAG-A5-258</div>
-          <h3>A5 Wagyu Ribeye</h3>
-          <div class="zh-name">和牛肋眼 A5 級</div>
-          <div class="meta"><span>Japan 鹿兒島</span><span>±2.5kg</span><span>Vacuum-packed</span></div>
+          <div class="sku">SKU · GDM-NZ-RIB</div>
+          <h3>Beef Ribeye</h3>
+          <div class="zh-name">紐西蘭牛肉眼</div>
+          <div class="meta"><span>紐西蘭 PS</span><span>1KG / 包</span><span>Vacuum-packed</span></div>
           <div class="price-row">
-            <div class="price">$1,280<small>/kg</small></div>
+            <div class="price">$336<small>/kg</small></div>
             <a href="#wholesale" class="ask">Request →</a>
           </div>
         </div>
@@ -314,16 +310,16 @@
 
       <div class="cut reveal">
         <div class="img">
-          <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=900&q=85" alt="Lamb Rack" loading="lazy">
-          <div class="tag">Fresh · Halal</div>
+          <img src="assets/p02-brazilian-beef.png" alt="Brazilian Beef Ribeye" loading="lazy">
+          <div class="tag">平價走量</div>
         </div>
         <div class="body">
-          <div class="sku">SKU · LAM-RK-08</div>
-          <h3>New Zealand Lamb Rack</h3>
-          <div class="zh-name">新西蘭羊架</div>
-          <div class="meta"><span>NZ Canterbury</span><span>8-bone</span><span>Fresh · 4°C</span></div>
+          <div class="sku">SKU · GDM-BR-RIB</div>
+          <h3>Brazilian Ribeye</h3>
+          <div class="zh-name">巴西牛肉眼</div>
+          <div class="meta"><span>巴西</span><span>1KG / 包</span><span>Frozen</span></div>
           <div class="price-row">
-            <div class="price">$268<small>/kg</small></div>
+            <div class="price">$168<small>/kg</small></div>
             <a href="#wholesale" class="ask">Request →</a>
           </div>
         </div>
@@ -331,16 +327,16 @@
 
       <div class="cut reveal">
         <div class="img">
-          <img src="https://images.unsplash.com/photo-1603048297172-c92544798d2e?auto=format&fit=crop&w=900&q=85" alt="USDA Prime Striploin" loading="lazy">
-          <div class="tag">Premium · Frozen</div>
+          <img src="assets/p03-oyster-blade.png" alt="US Prime Oyster Blade" loading="lazy">
+          <div class="tag">高級食材</div>
         </div>
         <div class="body">
-          <div class="sku">SKU · US-PR-STR</div>
-          <h3>USDA Prime Striploin</h3>
-          <div class="zh-name">美國頂級西冷</div>
-          <div class="meta"><span>USA Iowa</span><span>±3.2kg</span><span>Wet-aged 28d</span></div>
+          <div class="sku">SKU · GDM-US-BLD</div>
+          <h3>Oyster Blade</h3>
+          <div class="zh-name">肩胛肉眼</div>
+          <div class="meta"><span>美國 Prime BA</span><span>1KG / 包</span><span>Wet-aged</span></div>
           <div class="price-row">
-            <div class="price">$398<small>/kg</small></div>
+            <div class="price">$252<small>/kg</small></div>
             <a href="#wholesale" class="ask">Request →</a>
           </div>
         </div>
@@ -348,20 +344,89 @@
 
       <div class="cut reveal">
         <div class="img">
-          <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=85" alt="Free-range Chicken" loading="lazy">
-          <div class="tag">Fresh · Local</div>
+          <img src="assets/p04-fatty-beef.png" alt="US Prime Fatty Beef Slices" loading="lazy">
+          <div class="tag heat">破壞價招牌</div>
         </div>
         <div class="body">
-          <div class="sku">SKU · CK-FR-WHL</div>
-          <h3>Free-range Whole Chicken</h3>
-          <div class="zh-name">本地放養全雞</div>
-          <div class="meta"><span>HK 新界</span><span>±1.6kg</span><span>Air-chilled</span></div>
+          <div class="sku">SKU · GDM-US-FAT</div>
+          <h3>Fatty Beef Slices</h3>
+          <div class="zh-name">精修胸腹肥牛</div>
+          <div class="meta"><span>美國 Prime BA</span><span>1KG / 包</span><span>Hotpot cut</span></div>
           <div class="price-row">
-            <div class="price">$98<small>/each</small></div>
+            <div class="price">$145<small>/kg</small></div>
             <a href="#wholesale" class="ask">Request →</a>
           </div>
         </div>
       </div>
+
+      <div class="cut reveal">
+        <div class="img">
+          <img src="assets/p05-chicken-wings.png" alt="Ukrainian Hormone-Free Chicken Mid Wings" loading="lazy">
+          <div class="tag">平價走量</div>
+        </div>
+        <div class="body">
+          <div class="sku">SKU · GDM-UA-WNG25</div>
+          <h3>Chicken Mid Wings</h3>
+          <div class="zh-name">無激素雞中翼</div>
+          <div class="meta"><span>烏克蘭</span><span>2.5KG / 包</span><span>Hormone-free</span></div>
+          <div class="price-row">
+            <div class="price">$105<small>/pack</small></div>
+            <a href="#wholesale" class="ask">Request →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cut reveal">
+        <div class="img">
+          <img src="assets/p06-salmon.png" alt="Chilean Salmon Fillet with Skin" loading="lazy">
+          <div class="tag">高級食材</div>
+        </div>
+        <div class="body">
+          <div class="sku">SKU · GDM-CL-SAL</div>
+          <h3>Salmon Fillet</h3>
+          <div class="zh-name">帶皮三文魚柳</div>
+          <div class="meta"><span>智利</span><span>1KG / 包</span><span>Skin-on</span></div>
+          <div class="price-row">
+            <div class="price">$189<small>/kg</small></div>
+            <a href="#wholesale" class="ask">Request →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cut reveal">
+        <div class="img">
+          <img src="assets/p07-clam.png" alt="Frozen Cooked Clam Meat" loading="lazy">
+          <div class="tag">平價走量</div>
+        </div>
+        <div class="body">
+          <div class="sku">SKU · GDM-CN-CLM1</div>
+          <h3>Cooked Clam Meat</h3>
+          <div class="zh-name">急凍熟蜆肉</div>
+          <div class="meta"><span>中國 200-300pcs</span><span>1KG / 包</span><span>Frozen</span></div>
+          <div class="price-row">
+            <div class="price">$47.6<small>/pack</small></div>
+            <a href="#wholesale" class="ask">Request →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cut reveal">
+        <div class="img">
+          <img src="assets/p08-lobster.png" alt="Canadian Lobster Tail" loading="lazy">
+          <div class="tag heat">破壞價招牌</div>
+        </div>
+        <div class="body">
+          <div class="sku">SKU · GDM-CA-LOB</div>
+          <h3>Lobster Tail</h3>
+          <div class="zh-name">龍蝦尾</div>
+          <div class="meta"><span>加拿大 4-5oz</span><span>10lb / MOQ</span><span>Frozen</span></div>
+          <div class="price-row">
+            <div class="price">$560<small>/kg</small></div>
+            <a href="#wholesale" class="ask">Request →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -413,7 +478,16 @@
             <div class="field"><label>WhatsApp</label><input type="tel" placeholder="+852 2345 6789" required></div>
           </div>
           <div class="field"><label>需要的肉類</label>
-            <select><option>Wagyu / 和牛</option><option>Lamb / 羊肉</option><option>Beef / 牛肉</option><option>Chicken / 雞肉</option><option>Pork / 豬肉</option><option>Seafood / 海鮮</option></select>
+            <select>
+              <option>牛肉眼 · Ribeye</option>
+              <option>肩胛肉眼 · Oyster Blade</option>
+              <option>肥牛片 · Fatty Beef Slices</option>
+              <option>雞中翼 · Chicken Wings</option>
+              <option>三文魚柳 · Salmon</option>
+              <option>蜆肉 · Clam Meat</option>
+              <option>龍蝦尾 · Lobster Tail</option>
+              <option>其他 / Other</option>
+            </select>
           </div>
           <div class="field"><label>備註 / 月用量</label><textarea rows="3" placeholder="e.g. 約 80kg 牛肋眼 / 每月"></textarea></div>
           <button type="submit" class="submit">Submit Quote Request</button>
@@ -469,9 +543,7 @@
 
 <script>
   // reveal on scroll — progressive enhancement
-  // 1) Mark all .reveal as ready (hidden) so transition is smooth
   document.querySelectorAll('.reveal').forEach(el => el.classList.add('reveal-ready'));
-  // 2) IntersectionObserver reveals them
   const io = new IntersectionObserver((entries)=>{
     entries.forEach((e,i)=>{
       if(e.isIntersecting){
@@ -481,9 +553,8 @@
     });
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  // 3) Safety net: anything still hidden after 3s → show (slow scroll / print / screenshot)
   setTimeout(()=>{ document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in')); }, 3000);
 </script>
 </body>
 </html>
-<!-- gdm pages deploy -->
+<!-- gdm pages deploy self-contained -->
